@@ -1,0 +1,104 @@
+program test4;
+
+constant m = 84, n = 24;
+
+var x,y,p,q,r,z,reply;
+
+procedure multiply;
+/* multiply is accomplished by using a "double/halve" strategy;
+in assembly language this is implemented as bit operations and
+does not require any hardware multiply support.*/
+var a,b;
+begin
+  a := x; b := y; p := 0;
+  while b > 0 do
+    begin
+      if odd b then p := p + a;
+      a := 2 * a; b := b/2
+    end
+end;
+
+
+procedure divide;
+/* a similar strategy to multiply using a double/halve approach.
+The divisor is subtracted from the remainder (which is initialized to
+the dividend) and one is added to the quotient until the remainder is
+less than the divisor.  */
+var w;
+begin
+  r:= x; q := 0; w := y;
+  while w <= r do w := 2*w;
+  while w > y do begin
+    q:= 2*q; w := w/2;
+    if w <= r then begin
+      r := r - w;
+      q := q + 1
+    end
+  end
+end;
+
+procedure gcd;
+var f,g;
+begin
+  f:= x; g:= y;
+  while f <> g do begin
+    if f < g then g := g - f;
+    if g < f then f := f - g
+  end;
+  z := f
+end;
+
+begin
+  writestr "This program calculates the product,";
+  writeln;
+  writestr "quotient/remainder, and the gcd for";
+  writeln;
+  writestr "two user specified POSITIVE numbers.";
+  writeln;
+  reply:= 1;
+  while reply <> 0 do
+    begin
+      writestr "please enter the first number";
+      readint x;
+      writeln;
+      writestr "please enter the second number";
+      readint y;
+      writeln;
+      call multiply;
+      writestr "product(";
+      writeint x;
+      writestr ",";
+      writeint y;
+      writestr ") = ";
+      writeint p;
+      writeln;
+      call divide;
+      writestr "quotient(";
+      writeint x;
+      writestr ",";
+      writeint y;
+      writestr ") = ";
+      writeint q;
+      writeln;
+      writestr "remainder(";
+      writeint x;
+      writestr ",";
+      writeint y;
+      writestr ") = ";
+      writeint r;
+      writeln;
+      call gcd;
+      writestr "gcd(";
+      writeint x;
+      writestr ",";
+      writeint y;
+      writestr ") = ";
+      writeint z;
+      writeln;
+      writestr "Try again? (0 to exit) ";
+      readint reply;
+      writeln
+   end;
+  writestr "Thanks for trying this program.";
+  writeln
+end.

@@ -1,0 +1,15 @@
+program fortest;
+var x,y;
+begin
+  writestr "This program calculates the product";
+  writeln;
+  for(x:=0; x<10; x:=x+1)
+  begin
+       writestr "Pl0 Sucks";
+       writeln
+  end;
+  writeln;
+  writestr "Hey there";
+  y := y * y
+end.
+  
