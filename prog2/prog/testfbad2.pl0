@@ -1,0 +1,9 @@
+program testfbad2;
+var i;
+
+begin
+   for(i:=0;i<10;i:=i+1  // missing close brace
+   begin
+      writestr "Hello World"
+   end
+end.

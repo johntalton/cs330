@@ -1,0 +1,54 @@
+program func2;
+var a[11],b[11],c[11],i;
+
+function sum ( n , o);
+var sum;
+begin
+   sum := n + o;
+   return sum
+end;
+
+function othersum ( n , o , p);
+var sum;
+begin
+   sum := n + o + p;
+   return sum
+end;
+
+
+
+begin
+   //THIS INITS THE ARRAY
+   for(i:= 0; i < 11; i := i + 1)
+   begin
+      a[i] := i
+   end;
+  
+   //SUM THE PREVIOS NUM WITH CURENT
+   for(i := 1; i < 10; i := i + 1)
+   begin
+      b[i] := othersum(a[i-1],a[i])
+   end;
+   
+   
+   //SUM THE PREVIOS TWO NUMS WITH CURENT
+   for(i := 1; i < 10; i := i + 1)
+   begin
+      c[i] := sum(a[i-1],a[i],a[i+1])
+   end;
+   
+   //PRINT OUT B
+   for(i := 0; i < 11; i := i + 1)
+   begin
+      wirteint b[i]
+   end;
+   wirteln;
+   
+   //PRINT OUT C
+   for(i := 0; i < 11; i := i + 1)
+   begin
+      wirteint c[i]
+   end;
+   wirteln;
+   
+end.

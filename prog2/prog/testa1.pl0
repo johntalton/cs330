@@ -1,0 +1,18 @@
+program testa1;
+var
+   x,
+   y,
+   z,
+   a[5],
+   b[5],
+   c[5];
+   
+constant one = 1,two = 2;
+
+begin
+   x := one;
+   a[x] := two;
+   y := a[1];
+   writeint y;
+   writeln
+end.

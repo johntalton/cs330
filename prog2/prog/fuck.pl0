@@ -1,0 +1,21 @@
+program func2;
+var a;
+
+function sum ( n , o);
+var sum;
+begin
+   sum := n + o;
+   return sum
+end;
+
+fucntion sum ( n );
+begin
+   n := 2;
+   return n
+end;
+
+begin
+   a:= 10;
+   writeln
+   
+end.

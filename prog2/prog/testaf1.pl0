@@ -1,0 +1,37 @@
+program testaf1;
+
+var a[2],x,m[5],j[3],i,k[30];
+
+constant p = 4;
+
+begin
+   
+   m[2] := 9;
+   j[0] := 2;
+   x := m[2] + j[0];
+   writeint x;
+   writeln;
+   m[2] := 1;
+   j[1] := 4;
+   x := j[m[2]];
+  /* m[10] := 1;*/
+   writeint x;
+   writeln;
+   m[x] := 5;
+   x := m[x];
+   writeint x;
+   writeln;
+   m[p] := 2;
+   x := m[p];
+   writeint x;
+   writeln;
+   j[2] := 10;
+   j[0] := 2;
+   for(a[1] := m[p];a[1] <= j[j[0]];a[1] := a[1] + j[0])
+   begin
+      k[i] := a[1] * a[1];
+      x := k[i];
+      writeint x;
+      writestr " "
+   end
+end.

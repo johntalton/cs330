@@ -1,0 +1,17 @@
+program func1;
+
+var a, b, total;
+
+
+function blah (x,y,z);
+begin
+   x := x;
+   return x
+end;
+
+begin
+   total := 1;
+   total := blah(10,0,0) + blah(11,0,0);
+   writeint total;
+   writeln
+end.

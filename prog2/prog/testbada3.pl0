@@ -1,0 +1,8 @@
+program testbada3;
+var a[],x;  //missing array size 
+begin
+   a[2] := 1;
+   x := a[2];
+   writeint x;
+   writeln
+end.

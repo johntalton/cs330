@@ -1,0 +1,15 @@
+program testaf2;
+var i,x,a[10];
+
+begin
+   for(i := 0; i < 10; i := i + 1)
+   begin
+      a[i] := 10 - i
+   end;
+   for(i := 0; i < 10; i := i + 1)
+   begin
+      x := a[i];
+      writeint x;
+      writestr " "
+   end
+end.

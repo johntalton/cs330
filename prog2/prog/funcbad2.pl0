@@ -1,0 +1,17 @@
+program funcbad2;
+
+var a, b, total;
+
+
+function blah (x);
+begin
+   if x < 0 then return x
+   // runtime error... no return
+end;
+
+begin
+   total := 1;
+   total := blah(10) + blah(11);
+   writeint total;
+   writeln
+end.

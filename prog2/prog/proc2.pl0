@@ -1,0 +1,30 @@
+program proc1;
+
+var a, b, c;
+
+procedure test1;
+begin
+   writestr "hello";
+   writeln
+end;
+
+procedure test2 (x,y);
+begin
+   x := y;
+   writeint x;
+   writeln;
+   writeint y;
+   writeln
+end;
+
+begin
+   a := 1;
+   b := 2;
+   call test1 ;
+   call test2 (a, b);
+   writeint a;
+   writeln;
+   writeint b;
+   writeln
+   
+end.

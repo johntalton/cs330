@@ -1,0 +1,6 @@
+program testaout1;
+var a[5]; 
+
+begin
+   a[5] := 37
+end.

@@ -1,0 +1,18 @@
+program func2;
+var a,b,c;
+
+function factorial (n);
+begin
+   if n < 1 then return 1;
+   return n * factorial(n - 1)
+end;
+
+begin
+   c := factorial(2);
+   a := factorial(factorial(3) + factorial(3) - c);
+   writeint a;
+   writeln;
+   b := factorial(3) * factorial(2) - c;
+   writeint b;
+   writeln
+end.

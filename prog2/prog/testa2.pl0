@@ -1,0 +1,15 @@
+program testa2;
+var a[5],b[5],c[5],d[5],x,y,z;
+constant one = 1,two = 2;
+begin
+  x := two;
+  y := 3;
+  b[one] := 1;
+  c[3] := 1;
+  d[x] := y;
+  a[2] := 69;
+  a[one] := 37;
+  a[b[c[d[x]]]] := a[1] + a[2]; //a[1]
+  z := a[1];
+  writeint z
+end.

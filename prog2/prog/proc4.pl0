@@ -1,0 +1,27 @@
+program factorial;
+
+var a, b, total;
+
+
+procedure fact (x);
+   procedure AddOne (xPlusOne);
+   begin
+      writeint xPlusOne
+   end;
+begin
+   total := total * x;
+   x := x - 1;
+   call AddOne(x);
+   if x <> 1 then
+      call fact (x)
+end;
+
+begin
+   total := 1;
+   writeint total;
+   writeln;
+   call fact(10);
+   writeint total;
+   writeln
+   
+end.

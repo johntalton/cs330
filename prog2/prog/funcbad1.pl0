@@ -1,0 +1,17 @@
+program funcbad1;
+
+var a, b, total;
+
+
+function blah (x);
+begin
+   x := x
+   //compile error .. no return
+end;
+
+begin
+   total := 1;
+   total := blah(10) + blah(11);
+   writeint total;
+   writeln
+end.

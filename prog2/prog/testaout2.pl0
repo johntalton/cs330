@@ -1,0 +1,6 @@
+program testaout2;
+var a[5]; 
+
+begin
+   a[-37] := 37
+end.

@@ -1,0 +1,8 @@
+program testbada2;
+var a[4],x;
+begin
+   a[2] := 1;
+   x := a[2;  // there is a error missing ]
+   writeint x;
+   writeln
+end.

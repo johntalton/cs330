@@ -1,0 +1,10 @@
+program testfor1;
+var i;
+
+begin
+   for(i := 7;i > 0;i := i - 2)
+   begin
+      writeint i;
+      writestr " "
+   end
+end.

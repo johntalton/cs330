@@ -1,0 +1,24 @@
+program proc1;
+
+procedure test1;
+begin
+   writestr "hello";
+   writeln
+end;
+
+procedure test2 (x,y);
+begin
+   x := y
+end;
+
+procedure test3 ();
+var x;
+begin
+   x:=1
+end;
+
+
+begin
+   writestr "this is fun";
+   writeln
+end.
